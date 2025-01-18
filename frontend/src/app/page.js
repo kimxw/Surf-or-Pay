@@ -2,6 +2,8 @@
 
 import React from 'react';
 import '../../styles/button.css'; 
+import {AuthProvider, useAuth} from "../../backend/contexts/AuthContext";
+
 
 export default function Home() {
   const handleLoginClick = () => {
@@ -18,6 +20,9 @@ export default function Home() {
       <div className="flex space-x-4 mt-4">
         <button className="button-27" role="button" onClick={handleLoginClick}>Log in</button>
         <button className="button-27" role="button">Sign up</button>
+        <AuthProvider>
+
+        </AuthProvider>
       </div>
     </div>
   );
